@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/jzt/Desktop/C++_study/redesigned-octo-memory/C++_Basics/build",
+  "command": "/usr/bin/c++   -Wall -Wextra -Wconversion -Wsign-conversion -Werror -pedantic-errors -Weffc++ -std=gnu++2b -arch arm64 -o CMakeFiles/streams.dir/streams.cpp.o -c /Users/jzt/Desktop/C++_study/redesigned-octo-memory/C++_Basics/streams.cpp",
+  "file": "/Users/jzt/Desktop/C++_study/redesigned-octo-memory/C++_Basics/streams.cpp",
+  "output": "CMakeFiles/streams.dir/streams.cpp.o"
+}
+]
