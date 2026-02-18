@@ -36,8 +36,6 @@
 *.exe
 *.out
 *.app
-*.obj
-*.o
 *.dSYM/
 
 # Optional: ignore build folders
