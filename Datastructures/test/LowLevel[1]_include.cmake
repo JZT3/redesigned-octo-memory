@@ -1,0 +1,5 @@
+if(EXISTS "/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/LowLevel[1]_tests.cmake")
+  include("/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/LowLevel[1]_tests.cmake")
+else()
+  add_test(LowLevel_NOT_BUILT LowLevel_NOT_BUILT)
+endif()
