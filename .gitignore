@@ -36,6 +36,13 @@
 *.exe
 *.out
 *.app
+*.obj
+*.o
+*.dSYM/
+
+# Optional: ignore build folders
+bin/
+build/
 
 # debug information files
 *.dwo
