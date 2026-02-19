@@ -27,3 +27,9 @@ TEST(simple_alloc,MallocReturnsAlignedMemory)
   EXPECT_TRUE(is_aligned(p));
   custom_free(p);
 }
+
+
+TEST(simple_alloc, ZeroSizeMallocReturnsNull)
+{
+  EXPECT_EQ(custom_malloc(0), nullptr);
+}
