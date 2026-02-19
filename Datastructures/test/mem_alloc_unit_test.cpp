@@ -1,0 +1,69 @@
+#include <cstddef>
+#include <cstdint>
+#include <gtest/gtest.h>
+#include <iostream>
+
+#include "../mem_allocate.hpp"
+
+using namespace simple_alloc;
+
+static bool is_aligned(void* ptr)
+{
+  return reinterpret_cast<std::uintptr_t>(ptr) % ALIGNMENT == 0;
+}
+
+static BlockHeader* header_from_ptr(void* p)
+{
+  return ptr_add<BlockHeader*>(p, -static_cast<std::ptrdiff_t>(HEADER_SIZE));
+}
+
+
+/*------- Trivial Base Cases -------------- */
+
+TEST(simple_alloc,MallocReturnsAlignedMemory)
+{
+  void* p = custom_malloc(24);
+
+  std::cout << "custom malloc(24) returned: " << p << std::endl;
+  ASSERT_NE(p, nullptr) << "Allocation failed!";
+  EXPECT_TRUE(is_aligned(p));
+  custom_free(p);
+}
+
+
+TEST(simple_alloc, ZeroSizeMallocReturnsNull)
+{
+  EXPECT_EQ(custom_malloc(0), nullptr);
+}
+
+TEST(simple_alloc, SmallAllocStoresCorrectSize)
+{
+  void* p= custom_malloc(32);
+  ASSERT_NE(p, nullptr);
+
+  BlockHeader* h = header_from_ptr(p);
+
+  EXPECT_TRUE(is_alloc(h));
+  EXPECT_GE(get_size(h), 32 + HEADER_SIZE + FOOTER_SIZE);
+
+  custom_free(p);
+}
+
+
+/* =====================================
+ *  Footer & Boundary Tag Tests
+ *  ============================== */
+
+TEST(simple_alloc, FooterMatchesHeader)
+{
+  void* p = custom_malloc(64);
+  ASSERT_NE(p, nullptr);
+
+  BlockHeader* h = header_from_ptr(p);
+  BlockFooter* f = ptr_add<BlockFooter*>(h, get_size(h) - FOOTER_SIZE);
+
+  EXPECT_EQ(h->size_alloc, f->size_alloc);
+
+  custom_free(p);
+}
+
