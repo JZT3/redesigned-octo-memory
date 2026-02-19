@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmemalloc_lib.a CMakeFiles/memalloc_lib.dir/mem_allocate.cpp.o
+/usr/bin/ranlib libmemalloc_lib.a

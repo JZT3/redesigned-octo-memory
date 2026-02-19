@@ -1,0 +1,3 @@
+add_test([=[simple_alloc.MallocReturnsAlignedMemory]=]  [==[/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/test_memalloc]==] [==[--gtest_filter=simple_alloc.MallocReturnsAlignedMemory]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[simple_alloc.MallocReturnsAlignedMemory]=]  PROPERTIES DEF_SOURCE_LINE [==[/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/test_memalloc.cpp:21]==] WORKING_DIRECTORY [==[/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test_memalloc_TESTS simple_alloc.MallocReturnsAlignedMemory)

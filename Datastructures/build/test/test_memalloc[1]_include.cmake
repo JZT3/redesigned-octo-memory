@@ -1,0 +1,5 @@
+if(EXISTS "/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/test_memalloc[1]_tests.cmake")
+  include("/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/test_memalloc[1]_tests.cmake")
+else()
+  add_test(test_memalloc_NOT_BUILT test_memalloc_NOT_BUILT)
+endif()

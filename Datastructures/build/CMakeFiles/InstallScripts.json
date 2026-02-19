@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/cmake_install.cmake",
+		"/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/cmake_install.cmake",
+		"/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/_deps/googletest-build/cmake_install.cmake",
+		"/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

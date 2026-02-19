@@ -1,0 +1,17 @@
+{
+  "tests": 1,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "simple_alloc",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "MallocReturnsAlignedMemory",
+          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/test_memalloc.cpp",
+          "line": 21
+        }
+      ]
+    }
+  ]
+}
