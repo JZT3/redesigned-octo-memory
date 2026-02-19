@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <gtest/gtest.h>
 #include <iostream>
+#include <vector>
 
 #include "../mem_allocate.hpp"
 
@@ -18,9 +19,11 @@ static BlockHeader* header_from_ptr(void* p)
 }
 
 
+
+
 /*------- Trivial Base Cases -------------- */
 
-TEST(simple_alloc,MallocReturnsAlignedMemory)
+TEST(MemAllocUnit,MallocReturnsAlignedMemory)
 {
   void* p = custom_malloc(24);
 
@@ -31,12 +34,99 @@ TEST(simple_alloc,MallocReturnsAlignedMemory)
 }
 
 
-TEST(simple_alloc, ZeroSizeMallocReturnsNull)
+TEST(MemAllocUnit, ZeroSizeMallocReturnsNull)
 {
   EXPECT_EQ(custom_malloc(0), nullptr);
 }
 
-TEST(simple_alloc, SmallAllocStoresCorrectSize)
+TEST(MemAllocUnit, MallocZeroReturnNonNullSafeExec)
+{
+  void* p = custom_malloc(0);
+  EXPECT_NO_FATAL_FAILURE( (void) p );
+  custom_free(p);
+}
+
+TEST(MemAllocUnit, FreeNullIsSafe) 
+{
+  EXPECT_NO_FATAL_FAILURE(custom_free(nullptr));
+}
+
+
+/* ================================================
+ *  Alignment, non-overlap, independent allocations
+ *  =============================================== */
+
+/*
+ * TEST(MemAllocUnit, MultipleAllocationsDontOverlap)
+{
+  constexpr int N = 256;
+  constexpr std::size_t SIZE = 64;
+
+  std::vector<void*> ptrs;
+  ptrs.reverse(N);
+
+  for (int i = 0; i < N; i++)
+  {
+    void* p = custom_malloc(SIZE);
+    ASSERT_NE(p, nullptr);
+    EXPECT_TRUE(is_aligned(p));
+    ptrs.push_back(p);
+  }
+
+  for (size_t i=0; i <ptrs.size(); i++)
+  {
+    auto ri = range_fr
+  }
+}
+*/
+
+/* =============================
+ * Defensive / Invalid Tests
+ * ============================*/
+
+TEST(MemAllocUnit, DoubleFreeDoesNotCrash)
+{
+  void* p = custom_malloc(64);
+  ASSERT_NE(p, nullptr);
+  custom_free(p);
+
+  EXPECT_NO_FATAL_FAILURE(custom_free(p));
+}
+
+TEST(MemallocUnit, FreeInvalidPointer)
+{
+  int stack_var { 0 };
+  void* bad = &stack_var;
+  EXPECT_NO_FATAL_FAILURE(custom_free(bad));
+}
+
+
+/* =====================================================
+ * Equivalence partitions small medium large allocations
+ * =====================================================*/
+
+
+TEST(MemAllocUnit, SmallMedLargePartitions)
+{
+  void* small  = custom_malloc(8);           // tiny
+  void* medium = custom_malloc(4097);        // a page
+  void* large  = custom_malloc(200 * 1025);  // typical mmap threshold
+
+  ASSERT_NE(small,  nullptr);
+  ASSERT_NE(medium, nullptr);
+  ASSERT_NE(large,  nullptr);
+
+  EXPECT_TRUE(is_aligned(small));
+  EXPECT_TRUE(is_aligned(medium));
+  EXPECT_TRUE(is_aligned(large));
+
+  custom_free(small);
+  custom_free(medium);
+  custom_free(large);
+
+}
+
+TEST(MemAllocUnit, SmallAllocStoresCorrectSize)
 {
   void* p= custom_malloc(32);
   ASSERT_NE(p, nullptr);
