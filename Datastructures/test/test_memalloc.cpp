@@ -18,6 +18,8 @@ static BlockHeader* header_from_ptr(void* p)
 }
 
 
+/*------- Trivial Base Cases -------------- */
+
 TEST(simple_alloc,MallocReturnsAlignedMemory)
 {
   void* p = custom_malloc(24);
@@ -46,3 +48,22 @@ TEST(simple_alloc, SmallAllocStoresCorrectSize)
 
   custom_free(p);
 }
+
+
+/* =====================================
+ *  Footer & Boundary Tag Tests
+ *  ============================== */
+
+TEST(simple_alloc, FooterMatchesHeader)
+{
+  void* p = custom_malloc(64);
+  ASSERT_NE(p, nullptr);
+
+  BlockHeader* h = header_from_ptr(p);
+  BlockFooter* f = ptr_add<BlockFooter*>(h, get_size(h) - FOOTER_SIZE);
+
+  EXPECT_EQ(h->size_alloc, f->size_alloc);
+
+  custom_free(p);
+}
+
