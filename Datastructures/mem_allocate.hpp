@@ -27,7 +27,7 @@ namespace simple_alloc {
     std::size_t size_alloc;
     BlockHeader* prev_free;
     BlockHeader* next_free;
-  };
+  }__attribute__((aligned(16))); // The compiler adds 8 bytes of padding normally without this line
 
   struct BlockFooter 
   {
@@ -37,7 +37,7 @@ namespace simple_alloc {
 
 
   // COMPILE-TIME CHECKS
-  static_assert(sizeof(BlockHeader)  % ALIGNMENT == 8, "Header must be aligned");
+  static_assert(sizeof(BlockHeader)  % ALIGNMENT == 0, "Header must be aligned");
   static_assert(sizeof(BlockFooter) <= ALIGNMENT,      "Footer fits in padding");
 
   constexpr std::size_t HEADER_SIZE = sizeof(BlockHeader);
