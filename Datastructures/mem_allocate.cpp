@@ -1,4 +1,5 @@
 #include "mem_allocate.hpp"
+#include <sys/mman.h>
 
 namespace simple_alloc {
 
@@ -55,7 +56,7 @@ namespace simple_alloc {
   
     void* mem = mmap(nullptr, size, 
                      PROT_READ   | PROT_WRITE,
-                     MAP_PRIVATE | MAP_PRIVATE,
+                     MAP_PRIVATE | MAP_ANONYMOUS,
                      -1,0);
 
     if (mem == MAP_FAILED)
