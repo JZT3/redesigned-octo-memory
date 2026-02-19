@@ -33,3 +33,16 @@ TEST(simple_alloc, ZeroSizeMallocReturnsNull)
 {
   EXPECT_EQ(custom_malloc(0), nullptr);
 }
+
+TEST(simple_alloc, SmallAllocStoresCorrectSize)
+{
+  void* p= custom_malloc(32);
+  ASSERT_NE(p, nullptr);
+
+  BlockHeader* h = header_from_ptr(p);
+
+  EXPECT_TRUE(is_alloc(h));
+  EXPECT_GE(get_size(h), 32 + HEADER_SIZE + FOOTER_SIZE);
+
+  custom_free(p);
+}
