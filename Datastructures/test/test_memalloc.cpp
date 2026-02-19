@@ -1,13 +1,15 @@
 #include <cstddef>
 #include <cstdint>
 #include <gtest/gtest.h>
+#include <iostream>
+
 #include "../mem_allocate.hpp"
 
 using namespace simple_alloc;
 
 static bool is_aligned(void* ptr)
 {
-  return reinterpret_cast<std::uintptr_t>(ptr) % ALIGNMENT == 8;
+  return reinterpret_cast<std::uintptr_t>(ptr) % ALIGNMENT == 0;
 }
 
 static BlockHeader* header_from_ptr(void* p)
@@ -16,10 +18,12 @@ static BlockHeader* header_from_ptr(void* p)
 }
 
 
-TEST(simple_alloc, MallocReturnsAlignedMemory)
+TEST(simple_alloc,MallocReturnsAlignedMemory)
 {
   void* p = custom_malloc(24);
-  ASSERT_NE(p, nullptr);
+
+  std::cout << "custom malloc(24) returned: " << p << std::endl;
+  ASSERT_NE(p, nullptr) << "Allocation failed!";
   EXPECT_TRUE(is_aligned(p));
-  free(p);
+  custom_free(p);
 }
