@@ -200,7 +200,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=LowLevel
+CMAKE_PROJECT_NAME:STATIC=Project
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -317,6 +317,15 @@ GTEST_HAS_ABSL:BOOL=OFF
 INSTALL_GTEST:BOOL=ON
 
 //Value Computed by CMake
+LowLevelTest_BINARY_DIR:STATIC=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test
+
+//Value Computed by CMake
+LowLevelTest_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+LowLevelTest_SOURCE_DIR:STATIC=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test
+
+//Value Computed by CMake
 LowLevel_BINARY_DIR:STATIC=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test
 
 //Value Computed by CMake
@@ -324,6 +333,15 @@ LowLevel_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 LowLevel_SOURCE_DIR:STATIC=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test
+
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test
+
+//Value Computed by CMake
+Project_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/_deps/googletest-build/googlemock

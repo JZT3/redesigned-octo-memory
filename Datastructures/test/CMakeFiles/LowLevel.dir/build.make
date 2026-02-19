@@ -72,28 +72,28 @@ include CMakeFiles/LowLevel.dir/flags.make
 CMakeFiles/LowLevel.dir/codegen:
 .PHONY : CMakeFiles/LowLevel.dir/codegen
 
-CMakeFiles/LowLevel.dir/test_memalloc.cpp.o: CMakeFiles/LowLevel.dir/flags.make
-CMakeFiles/LowLevel.dir/test_memalloc.cpp.o: test_memalloc.cpp
-CMakeFiles/LowLevel.dir/test_memalloc.cpp.o: CMakeFiles/LowLevel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LowLevel.dir/test_memalloc.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LowLevel.dir/test_memalloc.cpp.o -MF CMakeFiles/LowLevel.dir/test_memalloc.cpp.o.d -o CMakeFiles/LowLevel.dir/test_memalloc.cpp.o -c /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/test_memalloc.cpp
+CMakeFiles/LowLevel.dir/example_test.cpp.o: CMakeFiles/LowLevel.dir/flags.make
+CMakeFiles/LowLevel.dir/example_test.cpp.o: example_test.cpp
+CMakeFiles/LowLevel.dir/example_test.cpp.o: CMakeFiles/LowLevel.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LowLevel.dir/example_test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LowLevel.dir/example_test.cpp.o -MF CMakeFiles/LowLevel.dir/example_test.cpp.o.d -o CMakeFiles/LowLevel.dir/example_test.cpp.o -c /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/example_test.cpp
 
-CMakeFiles/LowLevel.dir/test_memalloc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LowLevel.dir/test_memalloc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/test_memalloc.cpp > CMakeFiles/LowLevel.dir/test_memalloc.cpp.i
+CMakeFiles/LowLevel.dir/example_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LowLevel.dir/example_test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/example_test.cpp > CMakeFiles/LowLevel.dir/example_test.cpp.i
 
-CMakeFiles/LowLevel.dir/test_memalloc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LowLevel.dir/test_memalloc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/test_memalloc.cpp -o CMakeFiles/LowLevel.dir/test_memalloc.cpp.s
+CMakeFiles/LowLevel.dir/example_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LowLevel.dir/example_test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/example_test.cpp -o CMakeFiles/LowLevel.dir/example_test.cpp.s
 
 # Object files for target LowLevel
 LowLevel_OBJECTS = \
-"CMakeFiles/LowLevel.dir/test_memalloc.cpp.o"
+"CMakeFiles/LowLevel.dir/example_test.cpp.o"
 
 # External object files for target LowLevel
 LowLevel_EXTERNAL_OBJECTS =
 
-LowLevel: CMakeFiles/LowLevel.dir/test_memalloc.cpp.o
+LowLevel: CMakeFiles/LowLevel.dir/example_test.cpp.o
 LowLevel: CMakeFiles/LowLevel.dir/build.make
 LowLevel: lib/libgtest_main.a
 LowLevel: lib/libgmock_main.a

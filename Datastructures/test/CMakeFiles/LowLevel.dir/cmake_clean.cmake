@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LowLevel.dir/test_memalloc.cpp.o"
-  "CMakeFiles/LowLevel.dir/test_memalloc.cpp.o.d"
+  "CMakeFiles/LowLevel.dir/example_test.cpp.o"
+  "CMakeFiles/LowLevel.dir/example_test.cpp.o.d"
   "LowLevel"
   "LowLevel.pdb"
   "LowLevel[1]_tests.cmake"

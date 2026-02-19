@@ -147,6 +147,13 @@ all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles 0
 .PHONY : all
 
+# The main codegen target
+codegen: cmake_check_build_system
+	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/_deps/googletest-build//CMakeFiles/progress.marks
+	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/codegen
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles 0
+.PHONY : codegen
+
 # The main clean target
 clean:
 	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/clean
@@ -177,6 +184,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... codegen"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
