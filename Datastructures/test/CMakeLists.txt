@@ -34,10 +34,10 @@ if(GTEST_HAS_ABSL)
 endif()
 
 
-# Create test malloc executable 
-add_executable(test_memalloc  test_memalloc.cpp)
+# Create unit test malloc executable 
+add_executable(unit_test_memalloc  mem_alloc_unit_test.cpp)
 
-target_link_libraries(test_memalloc
+target_link_libraries(unit_test_memalloc
   PRIVATE
     memalloc_lib
     gtest_main
@@ -45,7 +45,7 @@ target_link_libraries(test_memalloc
   )
 
 
-target_include_directories(test_memalloc
+target_include_directories(unit_test_memalloc
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR} # for test specific header files
 )
@@ -55,7 +55,7 @@ target_include_directories(test_memalloc
 #target_link_libraries(${PROJECT_NAME} gtest_main gmock_main)
 
 include(GoogleTest)
-gtest_discover_tests(test_memalloc)
+gtest_discover_tests(unit_test_memalloc)
 
 
 #if(BUILD_GMOCK)
