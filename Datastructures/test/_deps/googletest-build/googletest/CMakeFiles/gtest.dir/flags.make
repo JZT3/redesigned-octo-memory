@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/_deps/googletest-src/googletest/include -I/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/_deps/googletest-src/googletest
 
-CXX_FLAGSarm64 = -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1  
+CXX_FLAGSarm64 = -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1  
 
-CXX_FLAGS = -std=c++2b -arch arm64  -DGTEST_HAS_PTHREAD=1  
+CXX_FLAGS = -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1  
 

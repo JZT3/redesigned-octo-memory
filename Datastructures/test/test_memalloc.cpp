@@ -1,54 +1,25 @@
-#include <iostream>
+#include <cstddef>
+#include <cstdint>
 #include <gtest/gtest.h>
+#include "../mem_allocate.hpp"
 
-class example
+using namespace simple_alloc;
+
+static bool is_aligned(void* ptr)
 {
-  public:
-    int foo()
-    {
-      return 1;
-    }
-};
-
-class testFixture : public testing::Test
-{
-  public:
-    testFixture()
-    {
-      std::cout<<"construct"<<'\n';
-      ex = new example();
-    }
-
-    ~testFixture()
-    {
-      std::cout<<"destruct"<<std::endl;
-      delete ex;
-    }
-
-    void SetUp()
-    {
-      std::cout<<"set up"<<'\n';
-    }
-
-    void TearDown()
-    {
-      std::cout<<"tear down"<<'\n';
-    }
-
-    example* ex;
-};
-
-
-TEST_F(testFixture, test1)
-{
-  ASSERT_EQ(1,ex->foo());
+  return reinterpret_cast<std::uintptr_t>(ptr) % ALIGNMENT == 8;
 }
 
-/*
-int main(int argc, char **argv)
+static BlockHeader* header_from_ptr(void* p)
 {
-  testing::InitGoogleTest(&argc,argv);
-  return RUN_ALL_TESTS();
+  return ptr_add<BlockHeader*>(p, -static_cast<std::ptrdiff_t>(HEADER_SIZE));
 }
 
-*/
+
+TEST(simple_alloc, MallocReturnsAlignedMemory)
+{
+  void* p = custom_malloc(24);
+  ASSERT_NE(p, nullptr);
+  EXPECT_TRUE(is_aligned(p));
+  free(p);
+}

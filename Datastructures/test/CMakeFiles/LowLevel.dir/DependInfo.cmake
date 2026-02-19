@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/test_memalloc.cpp" "CMakeFiles/LowLevel.dir/test_memalloc.cpp.o" "gcc" "CMakeFiles/LowLevel.dir/test_memalloc.cpp.o.d"
+  "/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/example_test.cpp" "CMakeFiles/LowLevel.dir/example_test.cpp.o" "gcc" "CMakeFiles/LowLevel.dir/example_test.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

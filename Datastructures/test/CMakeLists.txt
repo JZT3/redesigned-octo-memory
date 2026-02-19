@@ -1,16 +1,4 @@
-# Note: CMake support is community-based. The maintainers do not use CMake
-# internally.
-
-cmake_minimum_required(VERSION 3.16)
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
-
-project(LowLevel LANGUAGES CXX)
-
-
-if(NOT CYGWIN AND NOT MSYS AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL QNX)
-  set(CMAKE_CXX_EXTENSIONS OFF)
-endif()
+cmake_minimum_required(VERSION 4.2.3)
 
 include(FetchContent)
 
@@ -46,13 +34,28 @@ if(GTEST_HAS_ABSL)
 endif()
 
 
+# Create test malloc executable 
+add_executable(test_memalloc  test_memalloc.cpp)
 
-add_executable(${PROJECT_NAME} test_memalloc.cpp)
+target_link_libraries(test_memalloc
+  PRIVATE
+    memalloc_lib
+    gtest_main
+    gmock_main
+  )
 
-target_link_libraries(${PROJECT_NAME} gtest_main gmock_main)
+
+target_include_directories(test_memalloc
+  PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR} # for test specific header files
+)
+
+
+
+#target_link_libraries(${PROJECT_NAME} gtest_main gmock_main)
 
 include(GoogleTest)
-gtest_discover_tests(${PROJECT_NAME})
+gtest_discover_tests(test_memalloc)
 
 
 #if(BUILD_GMOCK)

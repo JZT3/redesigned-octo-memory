@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/LowLevel.dir/test_memalloc.cpp.o -o LowLevel  lib/libgtest_main.a lib/libgmock_main.a lib/libgmock.a lib/libgtest.a
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/LowLevel.dir/example_test.cpp.o -o LowLevel  lib/libgtest_main.a lib/libgmock_main.a lib/libgmock.a lib/libgtest.a

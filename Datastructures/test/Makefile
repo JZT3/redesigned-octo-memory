@@ -147,6 +147,13 @@ all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles 0
 .PHONY : all
 
+# The main codegen target
+codegen: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test//CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/test/CMakeFiles 0
+.PHONY : codegen
+
 # The main clean target
 clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
@@ -172,17 +179,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LowLevel
+# Target rules for targets named test_memalloc
 
 # Build rule for target.
-LowLevel: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LowLevel
-.PHONY : LowLevel
+test_memalloc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_memalloc
+.PHONY : test_memalloc
 
 # fast build rule for target.
-LowLevel/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LowLevel.dir/build.make CMakeFiles/LowLevel.dir/build
-.PHONY : LowLevel/fast
+test_memalloc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_memalloc.dir/build.make CMakeFiles/test_memalloc.dir/build
+.PHONY : test_memalloc/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -241,7 +248,7 @@ test_memalloc.o: test_memalloc.cpp.o
 
 # target to build an object file
 test_memalloc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LowLevel.dir/build.make CMakeFiles/LowLevel.dir/test_memalloc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_memalloc.dir/build.make CMakeFiles/test_memalloc.dir/test_memalloc.cpp.o
 .PHONY : test_memalloc.cpp.o
 
 test_memalloc.i: test_memalloc.cpp.i
@@ -249,7 +256,7 @@ test_memalloc.i: test_memalloc.cpp.i
 
 # target to preprocess a source file
 test_memalloc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LowLevel.dir/build.make CMakeFiles/LowLevel.dir/test_memalloc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_memalloc.dir/build.make CMakeFiles/test_memalloc.dir/test_memalloc.cpp.i
 .PHONY : test_memalloc.cpp.i
 
 test_memalloc.s: test_memalloc.cpp.s
@@ -257,7 +264,7 @@ test_memalloc.s: test_memalloc.cpp.s
 
 # target to generate assembly for a file
 test_memalloc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LowLevel.dir/build.make CMakeFiles/LowLevel.dir/test_memalloc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_memalloc.dir/build.make CMakeFiles/test_memalloc.dir/test_memalloc.cpp.s
 .PHONY : test_memalloc.cpp.s
 
 # Help Target
@@ -266,6 +273,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... codegen"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -273,11 +281,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... LowLevel"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... test_memalloc"
 	@echo "... test_memalloc.o"
 	@echo "... test_memalloc.i"
 	@echo "... test_memalloc.s"
