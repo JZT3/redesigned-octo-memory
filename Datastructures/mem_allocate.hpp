@@ -37,7 +37,7 @@ namespace simple_alloc {
 
 
   // COMPILE-TIME CHECKS
-  static_assert(sizeof(BlockHeader)  % ALIGNMENT == 0, "Header must be aligned");
+  static_assert(sizeof(BlockHeader)  % ALIGNMENT == 8, "Header must be aligned");
   static_assert(sizeof(BlockFooter) <= ALIGNMENT,      "Footer fits in padding");
 
   constexpr std::size_t HEADER_SIZE = sizeof(BlockHeader);
