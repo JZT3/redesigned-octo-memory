@@ -175,17 +175,17 @@ memalloc_lib/fast:
 .PHONY : memalloc_lib/fast
 
 #=============================================================================
-# Target rules for targets named test_memalloc
+# Target rules for targets named unit_test_memalloc
 
 # Build rule for target.
-test_memalloc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_memalloc
-.PHONY : test_memalloc
+unit_test_memalloc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unit_test_memalloc
+.PHONY : unit_test_memalloc
 
 # fast build rule for target.
-test_memalloc/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_memalloc.dir/build.make test/CMakeFiles/test_memalloc.dir/build
-.PHONY : test_memalloc/fast
+unit_test_memalloc/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_test_memalloc.dir/build.make test/CMakeFiles/unit_test_memalloc.dir/build
+.PHONY : unit_test_memalloc/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -280,7 +280,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... memalloc_lib"
-	@echo "... test_memalloc"
+	@echo "... unit_test_memalloc"
 	@echo "... mem_allocate.o"
 	@echo "... mem_allocate.i"
 	@echo "... mem_allocate.s"

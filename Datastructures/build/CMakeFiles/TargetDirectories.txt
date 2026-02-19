@@ -5,7 +5,7 @@
 /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/CMakeFiles/install.dir
 /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/CMakeFiles/install/local.dir
 /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/CMakeFiles/install/strip.dir
-/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/CMakeFiles/test_memalloc.dir
+/Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/CMakeFiles/unit_test_memalloc.dir
 /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/CMakeFiles/edit_cache.dir
 /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/CMakeFiles/rebuild_cache.dir
 /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build/test/CMakeFiles/list_install_components.dir

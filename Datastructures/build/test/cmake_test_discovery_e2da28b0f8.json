@@ -8,22 +8,22 @@
       "testsuite": [
         {
           "name": "MallocReturnsAlignedMemory",
-          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/test_memalloc.cpp",
+          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/mem_alloc_unit_test.cpp",
           "line": 23
         },
         {
           "name": "ZeroSizeMallocReturnsNull",
-          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/test_memalloc.cpp",
+          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/mem_alloc_unit_test.cpp",
           "line": 34
         },
         {
           "name": "SmallAllocStoresCorrectSize",
-          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/test_memalloc.cpp",
+          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/mem_alloc_unit_test.cpp",
           "line": 39
         },
         {
           "name": "FooterMatchesHeader",
-          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/test_memalloc.cpp",
+          "file": "\/Users\/jzt\/Desktop\/C++_study\/redesigned-octo-memory\/Datastructures\/test\/mem_alloc_unit_test.cpp",
           "line": 57
         }
       ]

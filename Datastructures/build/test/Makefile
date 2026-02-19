@@ -162,42 +162,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/test_memalloc.dir/rule:
-	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/test_memalloc.dir/rule
-.PHONY : test/CMakeFiles/test_memalloc.dir/rule
+test/CMakeFiles/unit_test_memalloc.dir/rule:
+	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/unit_test_memalloc.dir/rule
+.PHONY : test/CMakeFiles/unit_test_memalloc.dir/rule
 
 # Convenience name for target.
-test_memalloc: test/CMakeFiles/test_memalloc.dir/rule
-.PHONY : test_memalloc
+unit_test_memalloc: test/CMakeFiles/unit_test_memalloc.dir/rule
+.PHONY : unit_test_memalloc
 
 # fast build rule for target.
-test_memalloc/fast:
-	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_memalloc.dir/build.make test/CMakeFiles/test_memalloc.dir/build
-.PHONY : test_memalloc/fast
+unit_test_memalloc/fast:
+	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_test_memalloc.dir/build.make test/CMakeFiles/unit_test_memalloc.dir/build
+.PHONY : unit_test_memalloc/fast
 
-test_memalloc.o: test_memalloc.cpp.o
-.PHONY : test_memalloc.o
+mem_alloc_unit_test.o: mem_alloc_unit_test.cpp.o
+.PHONY : mem_alloc_unit_test.o
 
 # target to build an object file
-test_memalloc.cpp.o:
-	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_memalloc.dir/build.make test/CMakeFiles/test_memalloc.dir/test_memalloc.cpp.o
-.PHONY : test_memalloc.cpp.o
+mem_alloc_unit_test.cpp.o:
+	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_test_memalloc.dir/build.make test/CMakeFiles/unit_test_memalloc.dir/mem_alloc_unit_test.cpp.o
+.PHONY : mem_alloc_unit_test.cpp.o
 
-test_memalloc.i: test_memalloc.cpp.i
-.PHONY : test_memalloc.i
+mem_alloc_unit_test.i: mem_alloc_unit_test.cpp.i
+.PHONY : mem_alloc_unit_test.i
 
 # target to preprocess a source file
-test_memalloc.cpp.i:
-	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_memalloc.dir/build.make test/CMakeFiles/test_memalloc.dir/test_memalloc.cpp.i
-.PHONY : test_memalloc.cpp.i
+mem_alloc_unit_test.cpp.i:
+	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_test_memalloc.dir/build.make test/CMakeFiles/unit_test_memalloc.dir/mem_alloc_unit_test.cpp.i
+.PHONY : mem_alloc_unit_test.cpp.i
 
-test_memalloc.s: test_memalloc.cpp.s
-.PHONY : test_memalloc.s
+mem_alloc_unit_test.s: mem_alloc_unit_test.cpp.s
+.PHONY : mem_alloc_unit_test.s
 
 # target to generate assembly for a file
-test_memalloc.cpp.s:
-	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_memalloc.dir/build.make test/CMakeFiles/test_memalloc.dir/test_memalloc.cpp.s
-.PHONY : test_memalloc.cpp.s
+mem_alloc_unit_test.cpp.s:
+	cd /Users/jzt/Desktop/C++_study/redesigned-octo-memory/Datastructures/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_test_memalloc.dir/build.make test/CMakeFiles/unit_test_memalloc.dir/mem_alloc_unit_test.cpp.s
+.PHONY : mem_alloc_unit_test.cpp.s
 
 # Help Target
 help:
@@ -211,10 +211,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test_memalloc"
-	@echo "... test_memalloc.o"
-	@echo "... test_memalloc.i"
-	@echo "... test_memalloc.s"
+	@echo "... unit_test_memalloc"
+	@echo "... mem_alloc_unit_test.o"
+	@echo "... mem_alloc_unit_test.i"
+	@echo "... mem_alloc_unit_test.s"
 .PHONY : help
 
 
